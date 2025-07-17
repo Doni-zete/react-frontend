@@ -1,0 +1,100 @@
+/* css/base.css */
+
+:root {
+  --primary-bg-color: #f5f5dc;
+  /* Beige */
+  --secondary-bg-color: #fce4cc;
+  /* Lighter Orange for sections */
+  --text-color-dark: #4f2f0b;
+  /* Dark Brown */
+  --text-color-light: #ffffff;
+  --progress-green-light: #a8e6cf;
+  --progress-green-medium: #7bdcb5;
+  --progress-green-dark: #4adea7;
+  --weekend-color: #e74c3c;
+  /* Red for weekends */
+  --border-color: rgba(160, 82, 45, 0.1);
+  /* Earthy border */
+
+  /* CSS Variable for number of goals, set by JS */
+  --num-goals: 6;
+  /* Default value, will be overridden by JS */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--primary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: white;
+  /* Or a light background */
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /*max-width: 1200px;*/
+  /* Adjust as needed */
+  width: 100%;
+}
+
+.action-buttons-section {
+  width: 100%;
+  /* Ocupa a largura total do container */
+  text-align: center;
+  /* Centraliza o botão dentro da seção */
+  margin-top: 30px;
+  /* Espaço acima da seção */
+  padding: 20px;
+  /* Padding interno para a seção */
+  background-color: var(--secondary-bg-color);
+  /* Fundo como os outros cards */
+  border-radius: var(--border-radius-card);
+  /* Borda arredondada */
+  box-shadow: var(--card-shadow);
+  /* Sombra */
+  box-sizing: border-box;
+  /* Inclui padding e border no cálculo da largura/altura */
+}
+
+/* Estilo base para todos os botões de ação (como o de importar/exportar e o de voltar) */
+#go-to-excel-page-btn,
+.back-button {
+  background-color: var(--progress-green-medium);
+  /* Cor de fundo do botão */
+  color: var(--text-color-light);
+  /* Cor do texto do botão */
+  border: none;
+  /* Remove a borda padrão do botão */
+  padding: 12px 25px;
+  /* Padding interno para dar tamanho ao botão */
+  border-radius: 8px;
+  /* Cantos arredondados */
+  cursor: pointer;
+  /* Muda o cursor para indicar que é clicável */
+  font-weight: bold;
+  /* Texto em negrito */
+  font-size: 1.1em;
+  /* Tamanho da fonte */
+  transition: background-color 0.3s ease;
+  /* Transição suave na cor de fundo */
+  /* Para o botão específico na página principal, pode ser útil um margin: auto; display: block; se ele estiver sozinho na section */
+  display: inline-block;
+  /* Permite que ele fique em linha com outros elementos, mas respeite largura e altura */
+}
+
+/* Efeito hover para os botões de ação */
+#go-to-excel-page-btn:hover,
+.back-button:hover {
+  background-color: var(--progress-green-dark);
+  /* Escurece a cor de fundo ao passar o mouse */
+}

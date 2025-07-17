@@ -1,0 +1,59 @@
+.excel-table-container {
+  overflow-x: auto;
+  margin-top: 24px;
+}
+
+.excel-table {
+  border-collapse: collapse;
+  min-width: 800px;
+  /* menor largura mínima */
+  width: 100%;
+  background: #fff;
+  font-size: 13px;
+  /* fonte menor */
+}
+
+.excel-table th,
+.excel-table td {
+  border: 1px solid #ccc;
+  padding: 4px 2px;
+  /* padding menor */
+  white-space: pre-line;
+  word-break: break-word;
+  min-width: 70px;
+  /* largura mínima menor */
+  text-align: left;
+  vertical-align: top;
+}
+
+.excel-table th {
+  background: #f7f7f7;
+  font-weight: bold;
+}
+
+.excel-table input {
+  width: 100%;
+  min-width: 50px;
+  font-size: 13px;
+  /* fonte menor */
+  padding: 2px 4px;
+  /* padding menor */
+  box-sizing: border-box;
+  background: #f9f9f9;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .excel-table {
+    min-width: 600px;
+    font-size: 13px;
+  }
+  .excel-table th,
+  .excel-table td {
+    min-width: 80px;
+    padding: 6px 2px;
+  }
+}

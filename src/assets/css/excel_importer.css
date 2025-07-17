@@ -1,0 +1,42 @@
+/* css/excel_importer.css */
+
+/* ... (seu código CSS existente para status-concluido, status-editando, etc.) ... */
+
+#excel-data-table td .status-select {
+  width: 100%;
+  /* Faz o select ocupar a largura total da célula */
+  height: 100%;
+  /* Faz o select ocupar a altura total da célula */
+  border: 1px solid var(--border-color);
+  /* Uma borda sutil */
+  border-radius: 4px;
+  padding: 2px 5px;
+  box-sizing: border-box;
+  /* Garante que padding e borda estejam inclusos na largura/altura */
+  background-color: white;
+  font-size: 0.9em;
+  /* Ajuste o tamanho da fonte se necessário */
+  color: var(--text-color-dark);
+  -webkit-appearance: none;
+  /* Remove o estilo padrão do select em navegadores WebKit */
+  -moz-appearance: none;
+  /* Remove o estilo padrão do select em navegadores Mozilla */
+  appearance: none;
+  /* Remove o estilo padrão do select */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292%22%20height%3D%22292%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069L146%20209%205%2069h282z%22%2F%3E%3C%2Fsvg%3E');
+  /* Ícone de seta para baixo */
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+#excel-data-table td .status-select:focus {
+  outline: none;
+  /* Remove o outline padrão ao focar */
+  border-color: var(--progress-green-dark);
+  /* Borda mais escura ao focar */
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+  /* Sombra de foco */
+}
+
